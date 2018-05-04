@@ -3,6 +3,12 @@ source config.sh
 
 sudo apt update
 
+# install google-chrome-stable
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+sudo apt update
+sudo apt install google-chrome-stable
+
 # install snaps
 sudo apt install snapd
 sudo snap install spotify signal-desktop
@@ -23,6 +29,8 @@ cd ~/Downloads/lastpass || exit
 wget https://lastpass.com/lplinux.tar.bz2
 tar xjvf ./lplinux.tar.bz2
 ./install_lastpass.sh
+# wget https://addons.mozilla.org/firefox/downloads/file/931368/
+# firefox lastpass_password_manager-4.9.2.0-an+fx.xpi
 cd ~ || exit
 rm -rf ~/Downloads/lastpass
 
