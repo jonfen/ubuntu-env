@@ -2,13 +2,36 @@
 source config.sh
 
 sudo apt update
+
+# install snaps
+sudo apt install snapd
+sudo snap install spotify signal-desktop
+sudo snap install --classic android-studio slack
+sudo snap list
+
+# install packages
+sudo apt -y install git rsync tree wireshark wget unzip
+
+# upgrade packages
 sudo apt -y dist-upgrade
 sudo apt -y autoremove
-sudo apt -y install git 
+
+# LastPass setup
+# https://lastpass.com/lplinux.php
+mkdir ~/Downloads/lastpass
+cd ~/Downloads/lastpass || exit
+wget https://lastpass.com/lplinux.tar.bz2
+tar xjvf ./lplinux.tar.bz2
+./install_lastpass.sh
+cd ~ || exit
+rm -rf ~/Downloads/lastpass
+
+# git setup
 git config --global user.email "$GIT_EMAIL" 
 git config --global user.name "$GIT_NAME"
 git config --global core.editor vi
 
+# Yubico FIDO U2F Security Key setup
 # https://github.com/Yubico/pam-u2f
 mkdir -p ~/dev/github.com/Yubico
 cd ~/dev/github.com/Yubico || exit
