@@ -1,3 +1,3 @@
 #!/bin/bash
-GIT_EMAIL="noreply@email.com"
-GIT_NAME="anonymous"
+GIT_EMAIL="jonathan.morrison@gmail.com"
+GIT_NAME="Jonathan Morrison"

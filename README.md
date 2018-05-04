@@ -5,6 +5,6 @@ There was an attempt
 ## Usage ##
 
 ```
-.\setup.sh
+.\all.sh
 ```
 
