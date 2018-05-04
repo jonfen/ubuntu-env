@@ -33,3 +33,5 @@ sudo chown "$USER:$USER" "$AUTHFILE"
 
 cat /etc/pam.d/sudo
 sudo sed -i '2 i\auth       required   pam_u2f.so cue' /etc/pam.d/sudo
+cat /etc/pam.d/gdm-password
+sudo sed -i '2 i\auth 	    required   pam_u2f.so' /etc/pam.d/gdm-password
