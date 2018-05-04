@@ -57,9 +57,12 @@ rm -rf ~/dev/github.com/Yubico
 if [ -f "$HOME/.ecryptfs" ]; then
   AUTHFILE="/etc/u2f_mappings"
 else
-  AUTHFILE="/$HOME/$USER/.config/Yubico/u2f_keys"
+  AUTHFILE="$HOME/.config/Yubico/u2f_keys"
+  mkdir -p "$HOME/.config/Yubico"
+  sudo touch "$AUTHFILE"
 fi
 
-pamu2fcfg --username="$USER" 1>"$AUTHFILE"
-PAMFILE="/etc/pam.d/pam_u2f"
-sudo echo "auth sufficient pam_u2f.so debug authfile=$AUTHFILE" 1>"$PAMFILE"
+echo "Press the device"
+sudo pamu2fcfg --username="$USER" | sudo tee "$AUTHFILE"
+
+# echo "auth	   required   pam_u2f.so cue" | sudo tee "/etc/pam.d/sudo" 
