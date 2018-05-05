@@ -33,3 +33,6 @@ sudo apt -y autoremove
 
 # Yubico FIDO U2F Security Key setup
 ./pam_u2f.sh
+
+# configure UFW
+./ufw.sh
