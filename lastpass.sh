@@ -3,7 +3,7 @@
 ## LastPass setup
 ## https://lastpass.com/lplinux.php
 
-sudo apt install wget tar
+sudo apt -y install wget tar
 
 mkdir ~/Downloads/lastpass
 cd ~/Downloads/lastpass || exit

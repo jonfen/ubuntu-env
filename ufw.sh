@@ -2,7 +2,7 @@
 
 ## UFW
 
-sudo apt install ufw
+sudo apt -y install ufw
 
 sudo ufw allow ssh/tcp
 sudo ufw logging on
