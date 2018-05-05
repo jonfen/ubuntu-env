@@ -36,3 +36,6 @@ sudo apt -y autoremove
 
 # configure UFW
 ./ufw.sh
+
+# configure openVPN
+./openvpn.sh
