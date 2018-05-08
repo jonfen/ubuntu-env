@@ -39,3 +39,7 @@ sudo apt -y autoremove
 
 # security checks
 ./security.sh
+
+# install teamviewer
+./teamviewer.sh
+
