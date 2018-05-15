@@ -45,3 +45,6 @@ sudo apt -y autoremove
 
 # install arduino IDE
 ./arduino.sh
+
+# add printers
+./printers.sh
