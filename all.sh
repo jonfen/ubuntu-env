@@ -43,3 +43,5 @@ sudo apt -y autoremove
 # install teamviewer
 ./teamviewer.sh
 
+# install arduino IDE
+./arduino.sh
