@@ -48,6 +48,9 @@ sudo apt -y dist-upgrade
 # add ham radio
 ./ham-radio.sh
 
+# install gnome extensions
+./gnome-extensions.sh
+
 # security checks
 ./security.sh
 
