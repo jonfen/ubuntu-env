@@ -23,7 +23,6 @@ sudo apt -y install git rsync tree wireshark wget unzip curl
 
 ## upgrade packages
 sudo apt -y dist-upgrade
-sudo apt -y autoremove
 
 ## LastPass setup
 ./lastpass.sh
@@ -51,3 +50,6 @@ sudo apt -y autoremove
 
 # security checks
 ./security.sh
+
+## cleanup
+sudo apt -y autoremove
