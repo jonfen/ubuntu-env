@@ -2,7 +2,7 @@
 
 ## security measures
 
-sudo apt -y install chkrootkit
+sudo apt -y install chkrootkit fail2ban
 
 ## UFW
 ./ufw.sh

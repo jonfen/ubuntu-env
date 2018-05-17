@@ -37,9 +37,6 @@ sudo apt -y autoremove
 # configure openVPN
 ./openvpn.sh
 
-# security checks
-./security.sh
-
 # install teamviewer
 ./teamviewer.sh
 
@@ -48,3 +45,9 @@ sudo apt -y autoremove
 
 # add printers
 ./printers.sh
+
+# add ham radio
+./ham-radio.sh
+
+# security checks
+./security.sh
