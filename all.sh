@@ -42,6 +42,9 @@ sudo apt -y dist-upgrade
 # install arduino IDE
 ./arduino.sh
 
+# install virtualbox & download VMs
+./virtualbox.sh
+
 # add printers
 ./printers.sh
 
