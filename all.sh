@@ -11,7 +11,6 @@ sudo apt install snapd
 sudo snap install spotify signal-desktop
 sudo snap install android-studio --classic
 sudo snap install slack --classic
-sudo snap install atom --classic
 sudo snap list
 
 ## add to favorites
@@ -32,6 +31,12 @@ sudo apt -y dist-upgrade
 
 # Yubico FIDO U2F Security Key setup
 ./pam_u2f.sh
+
+# Python
+./python.sh
+
+# Atom
+./atom.sh
 
 # configure openVPN
 ./openvpn.sh
