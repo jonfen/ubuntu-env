@@ -16,7 +16,6 @@ gunzip linux linux-brprinter-installer-$latest_brother_driver_version.gz
 chmod a+x linux-brprinter-installer-$latest_brother_driver_version
 
 sudo ./linux-brprinter-installer-$latest_brother_driver_version HL-L2360D
-sudo ./linux-brprinter-installer-$latest_brother_driver_version HL-3170CDW
 
 rm -rf linux-brprinter-installer-$latest_brother_driver_version*
 rm -rf hl*.i386.deb
