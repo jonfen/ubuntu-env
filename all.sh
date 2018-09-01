@@ -38,6 +38,9 @@ sudo apt -y dist-upgrade
 # Android
 ./android.sh
 
+# FreeCodeCamp
+./freecodecamp.sh
+
 # Atom
 ./atom.sh
 

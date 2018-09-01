@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo apt install npm
+sudo apt install npm nodejs nodejs-doc
 
 
