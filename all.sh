@@ -35,6 +35,9 @@ sudo apt -y dist-upgrade
 # Python
 ./python.sh
 
+# Android
+./android.sh
+
 # Atom
 ./atom.sh
 
