@@ -40,7 +40,7 @@ cd ~/Downloads/github.com/genesismining
 git clone https://github.com/genesismining/sgminer-gm
 cd sgminer-gm
 git pull
-sudo apt -y install libcurl4-openssl-dev pkg-config libtool libncurses5-dev
+sudo apt -y install libcurl4-openssl-dev pkg-config libtool libncurses5-dev dh-autoreconf
 make clean
 git submodule init
 git submodule update
