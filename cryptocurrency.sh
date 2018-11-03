@@ -8,7 +8,7 @@ sudo apt update
 sudo apt -y dist-upgrade
 sudo apt -y autoremove
 # https://github.com/teejee2008/timeshift
-sudo apt -y install timeshift
+sudo apt -y install timeshift build-essential
 
 # sudo timeshift --create --comments "pre install"
 sudo timeshift --list
@@ -26,12 +26,17 @@ rm -rf $latest_amdgpu_pro.*
 wget --referer=http://support.amd.com https://drivers.amd.com/drivers/linux/$latest_amdgpu_pro.tar.xz
 tar -Jxvf $latest_amdgpu_pro.tar.xz
 cd ~/Downloads/$latest_amdgpu_pro
-sudo apt -y install build-essential 
+sudo apt -y install opencl-amdgpu-pro
 sudo dpkg --add-architecture i386
 ./amdgpu-pro-install -y --opencl=legacy 
 lspci -v | grep VGA
 
 read -p "Press enter to continue"
+
+# Get AMD-ADL-SDK
+mkdir -p ~/Downloads/github.com/GPUOpen-LibrariesAndSDKs/
+cd ~/Downloads/github.com/GPUOpen-LibrariesAndSDKs/
+git clone https://github.com/GPUOpen-LibrariesAndSDKs/display-library
 
 # Install sgminer
 # https://github.com/genesismining/sgminer-gm
@@ -41,11 +46,18 @@ git clone https://github.com/genesismining/sgminer-gm
 cd sgminer-gm
 git pull
 sudo apt -y install libcurl4-openssl-dev pkg-config libtool libncurses5-dev dh-autoreconf ocl-icd-* opencl-headers clinfo
+
+mkdir -p ~/Downloads/github.com/genesismining/sgminer-gm/ADL_SDK/
+cp ~/Downloads/github.com/GPUOpen-LibrariesAndSDKs/display-library/adlutil/* ~/Downloads/github.com/genesismining/sgminer-gm/ADL_SDK/
+cp ~/Downloads/github.com/GPUOpen-LibrariesAndSDKs/display-library/include/* ~/Downloads/github.com/genesismining/sgminer-gm/ADL_SDK/
+# TODO: Fix paths in main.c
+
 make clean
 git submodule init
 git submodule update
 autoreconf -i
 CFLAGS="-O2 -Wall -march=native -std=gnu99" ./configure
+read -p "Press enter to continue"
 make
 ./sgminer -h
 
