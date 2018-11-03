@@ -1,6 +1,9 @@
 #!/bin/bash
 
 sudo add-apt-repository -y ppa:teejee2008/ppa
+echo "deb http://archive.ubuntu.com/ubuntu bionic universe" | sudo tee -a /etc/apt/sources.list
+echo "deb http://archive.ubuntu.com/ubuntu bionic-updates universe" | sudo tee -a /etc/apt/sources.list
+echo "deb http://archive.ubuntu.com/ubuntu bionic-security universe" | sudo tee -a /etc/apt/sources.list
 sudo apt update
 sudo apt -y dist-upgrade
 sudo apt -y autoremove
@@ -50,10 +53,6 @@ read -p "Press enter to continue"
 
 # Install Ethereum Wallet
 # Latest: https://github.com/ethereum/mist/releases/latest
-echo "deb http://archive.ubuntu.com/ubuntu bionic universe" | sudo tee -a /etc/apt/sources.list
-echo "deb http://archive.ubuntu.com/ubuntu bionic-updates universe" | sudo tee -a /etc/apt/sources.list
-echo "deb http://archive.ubuntu.com/ubuntu bionic-security universe" | sudo tee -a /etc/apt/sources.list
-sudo apt update
 latest_ethereum_version=0-11-1
 cd ~/Downloads
 rm ~/Downloads/Ethereum-Wallet-linux64-$latest_ethereum_version.deb
