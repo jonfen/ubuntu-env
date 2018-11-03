@@ -51,6 +51,8 @@ mkdir -p ~/Downloads/github.com/genesismining/sgminer-gm/ADL_SDK/
 cp ~/Downloads/github.com/GPUOpen-LibrariesAndSDKs/display-library/adlutil/* ~/Downloads/github.com/genesismining/sgminer-gm/ADL_SDK/
 cp ~/Downloads/github.com/GPUOpen-LibrariesAndSDKs/display-library/include/* ~/Downloads/github.com/genesismining/sgminer-gm/ADL_SDK/
 # TODO: Fix paths in main.c
+# cd ~/Downloads/github.com/genesismining/sgminer-gm/ADL_SDK/
+# gcc main.c -o adlutil -DLINUX -ldl -I ./
 
 make clean
 git submodule init
