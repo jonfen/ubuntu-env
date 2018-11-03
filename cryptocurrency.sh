@@ -61,7 +61,8 @@ autoreconf -i
 CFLAGS="-O2 -Wall -march=native -std=gnu99" ./configure
 read -p "Press enter to continue"
 make
-./sgminer -h
+sudo make install
+sgminer -h
 
 read -p "Press enter to continue"
 
