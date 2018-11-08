@@ -9,7 +9,7 @@ sudo apt install -y idle
 
 # Install snaps
 # sudo snap install pycharm-professional --classic
-sudo snap install pycharm-community --classic
+sudo snap install pycharm-professional --classic
 
 # Virtual Environments
 sudo apt install -y python3-venv
