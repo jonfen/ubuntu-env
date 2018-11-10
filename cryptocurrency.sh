@@ -1,21 +1,44 @@
 #!/bin/bash
 
-sudo add-apt-repository -y ppa:teejee2008/ppa
+# n00b notes once all the stuff bellow is installed:
+
+# ETH_WALLET (DO NOT FORGET THE PASSWORD)
+# $ geth account new
+# $ geth account list
+# backup ~/.ethereum/keystore/
+ 
+# POOLS
+# as opposed to solo mining, join a pool and trade a ~1% fee for a shared cut of distributed computing with others
+# ethpool.org and ethermine.org seem to have the same interface, but different payout structures
+# ethpool.org uses credits (https://ethpool.org/credits) which seem to be in favor of larger operations
+#
+# POOL: ethermine.org
+# https://github.com/ethereum-mining/ethminer/blob/master/docs/POOL_EXAMPLES_ETH.md
+# $ ethminer -G -P stratum1+ssl://ETH_WALLET.WORKERNAME@us2.ethermine.org:5555
+# status: https://ethermine.org/miners/ETH_WALLET/dashboard
+# estimated earnings: https://ethermine.org/miners/ETH_WALLET/payouts
+# ethermine.org pays out once every 24 hours
+# therefore the minimum payout should be close to what your miner produces in 24 hours
+# open https://ethermine.org/miners/ETH_WALLET/settings
+# register your email, minimum payout amount and validate using your public IP address
+
+# BLOCKCHAIN NODES
+# instead of creating a local node you can use a remote one
+# sign up on bittrex and get a eth address from there
+# OR
+# '$ geth --rpc' downloads a local node of the full ethereum blockchain
+# use: http://bc.daniel.net.nz/ to determine the necessary hard drive size
+
 echo "deb http://archive.ubuntu.com/ubuntu bionic universe" | sudo tee -a /etc/apt/sources.list
 echo "deb http://archive.ubuntu.com/ubuntu bionic-updates universe" | sudo tee -a /etc/apt/sources.list
 echo "deb http://archive.ubuntu.com/ubuntu bionic-security universe" | sudo tee -a /etc/apt/sources.list
 sudo apt update
 sudo apt -y dist-upgrade
 sudo apt -y autoremove
-# https://github.com/teejee2008/timeshift
-sudo apt -y install timeshift build-essential
-
-# sudo timeshift --create --comments "pre install"
-sudo timeshift --list
+sudo apt -y install build-essential git wget opencl-amdgpu-pro
 
 read -p "Press enter to continue"
 
-sudo apt -y install git wget
 mkdir -p ~/Downloads
 
 # Install Radeon RX 570 drivers
@@ -26,7 +49,6 @@ rm -rf $latest_amdgpu_pro.*
 wget --referer=http://support.amd.com https://drivers.amd.com/drivers/linux/$latest_amdgpu_pro.tar.xz
 tar -Jxvf $latest_amdgpu_pro.tar.xz
 cd ~/Downloads/$latest_amdgpu_pro
-sudo apt -y install opencl-amdgpu-pro
 sudo dpkg --add-architecture i386
 ./amdgpu-pro-install -y --opencl=legacy 
 lspci -v | grep VGA
@@ -66,6 +88,30 @@ sgminer -h
 
 read -p "Press enter to continue"
 
+# https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html
+cd ~/Downloads/
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1804_10.0.130-1_amd64.deb
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+sudo apt update
+sudo apt -y install cuda
+
+# Install ethminer
+sudo apt install git cmake perl libdbus-1-dev mesa-common-dev
+mkdir -p ~/Downloads/ethereum-mining
+cd ~/Downloads/ethereum-mining
+git clone https://github.com/ethereum-mining/ethminer
+cd ~/Downloads/ethereum-mining/ethminer
+git submodule update --init --recursive
+mkdir p ~/Downloads/ethereum-mining/ethminer/build
+cd ~/Downloads/ethereum-mining/ethminer/build
+cmake ..
+cmake --build .
+cmake --build . --config Release
+sudo make install
+
+read -p "Press enter to continue"
+
 # Install Ethereum Wallet
 # Latest: https://github.com/ethereum/mist/releases/latest
 latest_ethereum_version=0-11-1
@@ -102,12 +148,3 @@ cmake ..
 make
 
 read -p "Press enter to continue"
-
-
-
-
-
-
-
-
-
