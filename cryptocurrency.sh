@@ -2,7 +2,21 @@
 
 # n00b notes once all the stuff bellow is installed:
 
-# ETH_WALLET (DO NOT FORGET THE PASSWORD)
+# EDUCATION
+# https://executive.mit.edu/openenrollment/program/blockchain-technologies-business-innovation-and-application-self-paced-online/
+# https://www.udemy.com/cryptocurrency-algorithmic-trading-the-revolution/
+
+# SCREEN
+# http://aperiodic.net/screen/quick_reference
+# Remote into computer and be able to resume a session
+# $ screen # Start screen for the first time
+# $ screen -ls
+# $ screen -x # Attach to an existing screen
+# Ctrl-a c # Create a new window
+# Ctrl-a " # Show all windows
+
+# Create ETH_WALLET (!!!DO NOT FORGET THE PASSWORD YOU USE!!!)
+# https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts
 # $ geth account new
 # $ geth account list
 # backup ~/.ethereum/keystore/
@@ -20,7 +34,8 @@
 # ethermine.org pays out once every 24 hours
 # therefore the minimum payout should be close to what your miner produces in 24 hours
 # open https://ethermine.org/miners/ETH_WALLET/settings
-# register your email, minimum payout amount and validate using your public IP address
+# register your email, minimum payout amount and validate using your public IP address:
+# https://www.google.com/search?q=what+is+my+ip
 
 # BLOCKCHAIN NODES
 # instead of creating a local node you can use a remote one
