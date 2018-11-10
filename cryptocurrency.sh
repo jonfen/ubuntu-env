@@ -28,7 +28,7 @@
 #
 # POOL: ethermine.org
 # https://github.com/ethereum-mining/ethminer/blob/master/docs/POOL_EXAMPLES_ETH.md
-# $ ethminer -G -P stratum1+ssl://ETH_WALLET.WORKERNAME@us2.ethermine.org:5555
+# $ ethminer -G -R -P stratum1+ssl://ETH_WALLET.WORKERNAME@us2.ethermine.org:5555
 # status: https://ethermine.org/miners/ETH_WALLET/dashboard
 # estimated earnings: https://ethermine.org/miners/ETH_WALLET/payouts
 # ethermine.org pays out once every 24 hours
