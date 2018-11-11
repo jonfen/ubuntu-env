@@ -1,48 +1,6 @@
 #!/bin/bash
 
-# n00b notes once all the stuff bellow is installed:
-
-# EDUCATION
-# https://executive.mit.edu/openenrollment/program/blockchain-technologies-business-innovation-and-application-self-paced-online/
-# https://www.udemy.com/cryptocurrency-algorithmic-trading-the-revolution/
-
-# SCREEN
-# http://aperiodic.net/screen/quick_reference
-# Remote into computer and be able to resume a session
-# $ screen # Start screen for the first time
-# $ screen -ls
-# $ screen -x # Attach to an existing screen
-# Ctrl-a c # Create a new window
-# Ctrl-a " # Show all windows
-
-# Create ETH_WALLET (!!!DO NOT FORGET THE PASSWORD YOU USE!!!)
-# https://github.com/ethereum/go-ethereum/wiki/Managing-your-accounts
-# $ geth account new
-# $ geth account list
-# backup ~/.ethereum/keystore/
- 
-# POOLS
-# as opposed to solo mining, join a pool and trade a ~1% fee for a shared cut of distributed computing with others
-# ethpool.org and ethermine.org seem to have the same interface, but different payout structures
-# ethpool.org uses credits (https://ethpool.org/credits) which seem to be in favor of larger operations
-#
-# POOL: ethermine.org
-# https://github.com/ethereum-mining/ethminer/blob/master/docs/POOL_EXAMPLES_ETH.md
-# $ ethminer -G -R -P stratum1+ssl://ETH_WALLET.WORKERNAME@us2.ethermine.org:5555
-# status: https://ethermine.org/miners/ETH_WALLET/dashboard
-# estimated earnings: https://ethermine.org/miners/ETH_WALLET/payouts
-# ethermine.org pays out once every 24 hours
-# therefore the minimum payout should be close to what your miner produces in 24 hours
-# open https://ethermine.org/miners/ETH_WALLET/settings
-# register your email, minimum payout amount and validate using your public IP address:
-# https://www.google.com/search?q=what+is+my+ip
-
-# BLOCKCHAIN NODES
-# instead of creating a local node you can use a remote one
-# sign up on bittrex and get a eth address from there
-# OR
-# '$ geth --rpc' downloads a local node of the full ethereum blockchain
-# use: http://bc.daniel.net.nz/ to determine the necessary hard drive size
+# Read CRYPTOCURRENCY.MD
 
 echo "deb http://archive.ubuntu.com/ubuntu bionic universe" | sudo tee -a /etc/apt/sources.list
 echo "deb http://archive.ubuntu.com/ubuntu bionic-updates universe" | sudo tee -a /etc/apt/sources.list
@@ -67,6 +25,12 @@ cd ~/Downloads/$latest_amdgpu_pro
 sudo dpkg --add-architecture i386
 ./amdgpu-pro-install -y --opencl=legacy 
 lspci -v | grep VGA
+
+# Install Sensors
+sudo apt-get install lm-sensors
+sudo sensors-detect
+sudo service module-init-tools start
+sensors
 
 read -p "Press enter to continue"
 
