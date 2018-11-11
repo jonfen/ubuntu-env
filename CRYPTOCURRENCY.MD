@@ -46,6 +46,12 @@ You don't need your own node unless you are starting your own pool or solo minin
 
 ## [Overclocking RX 570 on Ubuntu](http://centosquestions.com/overclocking-radeon-rx-570-ubuntu/) ##
 
+* **VCLK** and **DCLK** are two **UVD** internal clocks.
+* **SCLK** is the Engine clock, depends on the current power level.
+* **MCLK** is the Memory clock, depends on the current power level.
+* **VDDC** (mV) is the GPU core voltage
+* **VDDCI** (mV) is the I/O bus voltage (between memory and GPU core) and comes from the PCI-Express slot.
+
 Card Info
 ```
 $ sudo cat /sys/kernel/debug/dri/0/amdgpu_pm_info
@@ -54,7 +60,7 @@ $ sudo cat /sys/kernel/debug/dri/2/amdgpu_pm_info
 $ sudo cat /sys/kernel/debug/dri/3/amdgpu_pm_info
 ```
 
-Core Frequency (0 means no overclocking)
+Engine Clock / Core Frequency (0 means no overclocking)
 ```
 $ sudo cat /sys/class/drm/card0/device/pp_sclk_od
 $ sudo cat /sys/class/drm/card1/device/pp_sclk_od
@@ -70,7 +76,7 @@ $ sudo echo 5 > /sys/class/drm/card2/device/pp_sclk_od
 $ sudo echo 5 > /sys/class/drm/card3/device/pp_sclk_od
 ```
 
-Memory (0 means no overclocking)
+Memory Clock (0 means no overclocking)
 ```
 $ sudo cat /sys/class/drm/card0/device/pp_mclk_od
 $ sudo cat /sys/class/drm/card1/device/pp_mclk_od
