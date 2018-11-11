@@ -70,10 +70,11 @@ $ sudo cat /sys/class/drm/card3/device/pp_sclk_od
 
 Overclock Core Frequency 5%
 ```
-$ sudo echo 5 > /sys/class/drm/card0/device/pp_sclk_od
-$ sudo echo 5 > /sys/class/drm/card1/device/pp_sclk_od
-$ sudo echo 5 > /sys/class/drm/card2/device/pp_sclk_od
-$ sudo echo 5 > /sys/class/drm/card3/device/pp_sclk_od
+$ sudo -i
+$ echo 5 | sudo tee > /sys/class/drm/card0/device/pp_sclk_od
+$ echo 5 | sudo tee > /sys/class/drm/card1/device/pp_sclk_od
+$ echo 5 | sudo tee > /sys/class/drm/card2/device/pp_sclk_od
+$ echo 5 | sudo tee > /sys/class/drm/card3/device/pp_sclk_od
 ```
 
 Memory Clock (0 means no overclocking)
@@ -86,10 +87,11 @@ $ sudo cat /sys/class/drm/card3/device/pp_mclk_od
 
 Overclock Memory 5%
 ```
-$ sudo echo 5 > /sys/class/drm/card0/device/pp_mclk_od
-$ sudo echo 5 > /sys/class/drm/card1/device/pp_mclk_od
-$ sudo echo 5 > /sys/class/drm/card2/device/pp_mclk_od
-$ sudo echo 5 > /sys/class/drm/card3/device/pp_mclk_od
+$ sudo -i
+$ echo 5 | sudo tee > /sys/class/drm/card0/device/pp_mclk_od
+$ echo 5 | sudo tee > /sys/class/drm/card1/device/pp_mclk_od
+$ echo 5 | sudo tee > /sys/class/drm/card2/device/pp_mclk_od
+$ echo 5 | sudo tee > /sys/class/drm/card3/device/pp_mclk_od
 ```
 
 ```
