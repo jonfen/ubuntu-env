@@ -30,7 +30,7 @@ lspci -v | grep VGA
 sudo apt-get install lm-sensors
 sudo sensors-detect
 sudo service module-init-tools start
-sensors
+sensors amdgpu-pci-*
 
 read -p "Press enter to continue"
 
