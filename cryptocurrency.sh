@@ -28,8 +28,9 @@ lspci -v | grep VGA
 
 # Install Sensors
 sudo apt-get install lm-sensors
+sudo systemctl start lm-sensors
+sudo systemctl enable lm-sensors
 sudo sensors-detect
-sudo service module-init-tools start
 sensors amdgpu-pci-*
 
 read -p "Press enter to continue"
