@@ -5,6 +5,32 @@
 * [MIT Blockchain Course](https://executive.mit.edu/openenrollment/program/blockchain-technologies-business-innovation-and-application-self-paced-online/)
 * [Udemy Crypto Trading Course](https://www.udemy.com/cryptocurrency-algorithmic-trading-the-revolution/)
 
+### Basics ###
+
+This is how I would explain it to a non-technical person.
+
+**What is cryptocurrency?**
+
+We don't know all the prime numbers, at best we only know [the last one that people found](https://en.wikipedia.org/wiki/Largest_known_prime_number), thanks to the combined efforts of people across the internet.  Think of cryptocurrency mining in the same way; where people with computers who don't know each other work together solving math problems on the internet which might yield the next piece of digital gold, like Bitcoin (BTC) or Ethereum (ETH).
+
+**Is it worth anything?**
+
+Sadly, Gold is just a rock, and like your car, your education, your stocks, or the piece(s) of paper in your wallet -- all these commodities have a *preceived value*.  Simply put, something is worth $5 only when someone else is willing to pay $5 for it.  That same thing is only worth $4 if that is the most someone will buy it for.  Or if it is rare, and multiple people want it, the highest bidder might drive the price to $6.
+
+Everything is subject to inflation, deflation and the laws of supply and demand.  Cryptocurrency is no different.  These different forms of electronic currency have, or don't have, value based on the number of people who agree on its value.   
+
+**What the hell is it?**
+
+If you go to the bank and ask to see the specific paper money you deposited there -- they might think you are crazy.  The money you gave to the bank was converted into a promise, an agreement that the bank will give you that same amount of money back when you decide to withdraw it.  What does the bank get out of the deal?  They can invest your money while you aren't using it and keep the interest.
+
+For simplicity's sake, imagine if there was only one bank in the world, and it had a public record/ledger of every deposit and withdrawl ever made by everyone in the history of money.  Because it was a public record, you can imagine that people would want to keep an up to date personal copy to (1) prove they deposited money, (2) to verify if someone else has money, and (3) [mutually assured destruction](https://en.wikipedia.org/wiki/Mutual_assured_destruction).  This long ledger is called a blockchain.  Everytime new cryptocurrency is found, it is added to someone's account in the blockchain.  Everytime cryptocurrency is exchanged for goods, services, or withdrawn -- it is transferred to someone else's account in the blockchain.  New crypto currency can only be mined, and a transfer can only be initiated by the seller, which makes it impossible to fake.
+
+**How do you mine cryptocurrency?**
+
+Groups of people digging for digital gold are called Mining Pools (see below) and they trade their processing power (CPU, GPU, FPGA, and/or ASIC) in exchange for a percentage, the administrator(s) of the mining pool usually take a percentage, aka fee, too.
+
+The pool keeps a tab for each miner based on their geth account key (ETH WALLET) and when someone's tab hits a certain amount.  
+
 ## [Screen](http://aperiodic.net/screen/quick_reference) ##
 
 Remote into computer and be able to resume a session
