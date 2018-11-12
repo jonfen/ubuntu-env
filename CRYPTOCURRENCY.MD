@@ -15,21 +15,25 @@ We don't know all the prime numbers, at best we only know [the last one that peo
 
 **Is it worth anything?**
 
-Sadly, Gold is just a rock, and like your car, your education, your stocks, or the piece(s) of paper in your wallet -- all these commodities have a *preceived value*.  Simply put, something is worth $5 only when someone else is willing to pay $5 for it.  That same thing is only worth $4 if that is the most someone will buy it for.  Or if it is rare, and multiple people want it, the highest bidder might drive the price to $6.
+Gold is just a rock, and like your car, your education, your stocks, or the piece(s) of paper in your wallet -- all these commodities have a *preceived value*.  Simply put, something is worth $5 only when someone else is willing to pay $5 for it.  That same thing is only worth $4 if that is the most someone will buy it for.  Or if it is rare, and multiple people want it, the highest bidder might drive the price to $6.
 
 Everything is subject to inflation, deflation and the laws of supply and demand.  Cryptocurrency is no different.  These different forms of electronic currency have, or don't have, value based on the number of people who agree on its value.   
 
-**What the hell is it?**
+**What is cryptocurrency?**
 
-If you go to the bank and ask to see the specific paper money you deposited there -- they might think you are crazy.  The money you gave to the bank was converted into a promise, an agreement that the bank will give you that same amount of money back when you decide to withdraw it.  What does the bank get out of the deal?  They can invest your money while you aren't using it and keep the interest.
+The money you give to the bank turns into an agreement -- that the bank will give you that same amount of money back when you decide to withdraw it.  The bank keeps a private record/edger that you can see online.  What does the bank get out of the deal?  They invest your money and keep the interest.
 
-For simplicity's sake, imagine if there was only one bank in the world, and it had a public record/ledger of every deposit and withdrawl ever made by everyone in the history of money.  Because it was a public record, you can imagine that people would want to keep an up to date personal copy to (1) prove they deposited money, (2) to verify if someone else has money, and (3) [mutually assured destruction](https://en.wikipedia.org/wiki/Mutual_assured_destruction).  This long ledger is called a blockchain.  Everytime new cryptocurrency is found, it is added to someone's account in the blockchain.  Everytime cryptocurrency is exchanged for goods, services, or withdrawn -- it is transferred to someone else's account in the blockchain.  New crypto currency can only be mined, and a transfer can only be initiated by the seller, which makes it impossible to fake.
+For simplicity's sake, imagine there was a single massive public record/ledger of how much money each person had in their account and every transaction in between -- a complete history of money.  Because it was a public record, you can imagine that people would want to keep an up-to-date personal copy to (1) prove they had money in their account, (2) to prove a transaction happened, and (3) [mutually assured destruction](https://en.wikipedia.org/wiki/Mutual_assured_destruction).  
 
-**How do you mine cryptocurrency?**
+This long ledger is called a blockchain.  Everytime new cryptocurrency is found, it is added to someone's account in the blockchain.  Everytime cryptocurrency is exchanged for goods, services, or withdrawn -- it is transferred to someone else's account in the blockchain.  New crypto currency can only be mined, and a transfer can only be initiated by the seller, which makes it impossible to fake especially when everyone has a copy of the record/edger.  If someone forgets or loses the password/keys to access their account -- [it is inaccessible forever](https://www.wired.co.uk/article/bitcoin-lost-newport-landfill).  
+
+**How do you convert cryptocurrency into a currency like the USD?**
 
 Groups of people digging for digital gold are called Mining Pools (see below) and they trade their processing power (CPU, GPU, FPGA, and/or ASIC) in exchange for a percentage, the administrator(s) of the mining pool usually take a percentage, aka fee, too.
 
-The pool keeps a tab for each miner based on their geth account key (ETH WALLET) and when someone's tab hits a certain amount.  
+The pool keeps a tab of how much each person is owed for their efforts and depending on the payout agreement of the pool the person's account is paid in units of the cryptocurrency.  For example, once a someone using the ethermine.org pool  contributes enough processing power to earn 0.05 ETH -- the pool administrators pay the tab by transferring to the miner's account (minus a 1% fee).  
+
+All cryptocurrency have an exchange rate into Bitcoin (BTC), and BTC is the only cryptocurrency that is converted into USD.  Just like stocks, these conversions happen on exchanges.  It is also at the time of conversions when cryptocurrency is  taxed and tracked.  However, if someone is willing to take payment in cryptocurrency (without a conversion), that makes for harder to trace transactions.
 
 ## [Screen](http://aperiodic.net/screen/quick_reference) ##
 
