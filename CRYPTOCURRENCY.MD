@@ -7,7 +7,7 @@
 
 ### Basics ###
 
-This is how I would explain it to a non-technical person.
+At risk of the [Dunning–Kruger effect](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect), I am going to attempt to document my understanding in simple terms and metaphors.
 
 **What is cryptocurrency?**
 
