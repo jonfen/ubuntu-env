@@ -9,4 +9,4 @@ There was an attempt
 ```
 ## See Also ##
 
-[Cryptocurrency README](CRYPTOCURRENCY.MD)
+[Cryptocurrency README](cryptocurrency/CRYPTOCURRENCY.MD)
