@@ -5,8 +5,6 @@
 * [MIT Blockchain Course](https://executive.mit.edu/openenrollment/program/blockchain-technologies-business-innovation-and-application-self-paced-online/)
 * [Udemy Crypto Trading Course](https://www.udemy.com/cryptocurrency-algorithmic-trading-the-revolution/)
 
-<iframe width="400" height="500" frameborder="0" src="https://www.bbc.com/news/av/embed/p05xtzm1/46150107"></iframe>
-
 ### Basics ###
 
 At risk of the [Dunning–Kruger effect](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect), I am going to attempt to document my understanding in simple terms and metaphors.  Like this [video](https://www.bbc.com/news/av/embed/p05xtzm1/46150107).
