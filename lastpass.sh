@@ -7,7 +7,7 @@ sudo apt -y install wget tar
 
 mkdir ~/Downloads/lastpass
 cd ~/Downloads/lastpass || exit
-wget https://lastpass.com/lplinux.tar.bz2
+wget https://download.cloud.lastpass.com/linux/lplinux.tar.bz2
 tar xjvf ./lplinux.tar.bz2
 ./install_lastpass.sh
 # wget https://addons.mozilla.org/firefox/downloads/file/931368/
