@@ -15,7 +15,8 @@ function install_gnome_extension() {
 
 ## install gnome extensions
 
-sudo apt -y install git chrome-gnome-shell meson
+sudo apt -y install git chrome-gnome-shell meson gnome-tweak-tool gnome-shell-extensions
+
 sudo apt -y install gir1.2-gtop-2.0 gir1.2-networkmanager-1.0  gir1.2-clutter-1.0
 
 install_gnome_extension "JasonLG1979" "gnome-shell-extensions-mediaplayer" "sound-output-device-chooser@kgshank.net"
@@ -30,3 +31,5 @@ cd gnome-shell-extensions-mediaplayer
 cd ~/Downloads
 rm -rf gnome-shell-extensions-mediaplayer
 
+mkdir ~/.themes
+mkdir ~/.icons
