@@ -33,3 +33,7 @@ rm -rf gnome-shell-extensions-mediaplayer
 
 mkdir ~/.themes
 mkdir ~/.icons
+
+# reset ubuntu defaults
+# gsettings reset org.gnome.desktop.interface gtk-theme
+# gsettings reset org.gnome.desktop.interface icon-theme
