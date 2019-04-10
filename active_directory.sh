@@ -9,6 +9,7 @@
 # https://help.ubuntu.com/community/ActiveDirectoryHowto
 # https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication?view=sql-server-2017
 # https://docs.microsoft.com/en-us/sql/azure-data-studio/enable-kerberos?view=sql-server-2017
+# https://help.ubuntu.com/18.04/serverguide/serverguide.pdf
 
 echo Enter Domain in UPPERCASE [ex: DOMAIN.LOCAL]: 
 read domain_name
@@ -34,3 +35,7 @@ realm list
 realm discover $domain_name 
 realm join $domain_name 
 sudo net getdomainsid
+
+# Edit DNS resolution
+# /etc/nnswitch.conf
+# make sure dns is in the hosts list before 'NOT FOUND'
