@@ -1,9 +1,14 @@
 #!/bin/bash
 
-## LastPass setup
-## https://lastpass.com/lplinux.php
+## pass
+# https://www.passwordstore.org/
 
-sudo apt -y install wget tar
+sudo apt -y install pass
+
+## LastPass & CLI setup
+# https://lastpass.com/lplinux.php
+
+sudo apt -y install wget tar lastpass-cli
 
 mkdir ~/Downloads/lastpass
 cd ~/Downloads/lastpass || exit
@@ -14,3 +19,4 @@ tar xjvf ./lplinux.tar.bz2
 # firefox lastpass_password_manager-4.9.2.0-an+fx.xpi
 cd ~ || exit
 rm -rf ~/Downloads/lastpass
+man lastpass-cli
