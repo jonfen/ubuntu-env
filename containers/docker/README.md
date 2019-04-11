@@ -10,7 +10,8 @@
 
 ## Quick Reference ##
 
-Display Docker version and info
+
+### Display Docker version and info
 ```
 $ docker
 $ docker --version
@@ -46,14 +47,19 @@ $ docker tag friendlyhello $(lpass show --url 'hub.docker.com' --username)/get-s
 $ docker push username/repository:tag
 ```
 
-### Build
+### Build [the Dockerfile]
 ```
 $ docker build --tag=[CONTAINER NAME] --network=host . 
 ```
 
-### Run (in background)
+### Run [container in background]
 ```
 $ docker run -d -p 4000:80 [CONTAINER NAME]
+```
+
+### Run [...and from a registry]
+```
+$ docker run -d -p 4000:80 username/repository:tag
 ```
 
 ### View stdout 
@@ -66,7 +72,7 @@ $ docker attach [CONTAINER ID]
 $ curl http://localhost:4000
 ```
 
-### Containers (runtime instances of an Image)
+### Containers (AKA runtime instances of an Image)
 ```
 $ docker container ls
 $ docker container ls -a  
@@ -83,11 +89,6 @@ $ docker exec -it [CONTAINER ID] bash
 ### Cleanup
 ```
 $ docker system prune
-```
-
-### Execute Docker image
-```
-$ docker run hello-world
 ```
 
 ## References ##
