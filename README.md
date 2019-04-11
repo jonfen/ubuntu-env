@@ -1,12 +1,7 @@
 # Environment Script 
 
-There was an attempt
+There was an attempt.  Categorization is by directory.
 
-## Usage ##
-
-```
-.\all.sh
-```
 ## See Also ##
 
 [Cryptocurrency README](cryptocurrency/CRYPTOCURRENCY.MD)
