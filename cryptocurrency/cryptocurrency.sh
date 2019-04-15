@@ -78,16 +78,15 @@ sudo apt -y install cuda
 
 # Install ethminer
 sudo apt install git cmake perl libdbus-1-dev mesa-common-dev
-mkdir -p ~/Downloads/ethereum-mining
+mkdir -p ~/Downloads/ethereum-mining/ethminer/build
 cd ~/Downloads/ethereum-mining
 git clone https://github.com/ethereum-mining/ethminer
 cd ~/Downloads/ethereum-mining/ethminer
 git submodule update --init --recursive
-mkdir p ~/Downloads/ethereum-mining/ethminer/build
 cd ~/Downloads/ethereum-mining/ethminer/build
-cmake ..
-cmake --build .
-cmake --build . --config Release
+sudo cmake ..
+sudo cmake --build .
+sudo cmake --build . --config Release
 sudo make install
 
 read -p "Press enter to continue"
