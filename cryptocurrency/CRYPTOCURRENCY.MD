@@ -59,7 +59,7 @@ As opposed to solo mining, you can join a pool and trade a ~1% fee for a shared 
 
 ### Pool: ethermine.org ###
 ```
-$ ethminer -G -R -P stratum1+ssl://ETH_WALLET.WORKERNAME@us2.ethermine.org:5555
+$ ethminer -G -R -P stratum1+ssl://ETH_WALLET.WORKERNAME@us2.ethermine.org:5555 --farm-retries 9999
 ```
 [Script to run ethminer as a daemon](https://gist.github.com/bmatthewshea/9a062c092fd673318f8d208ce44f4f51)
 
