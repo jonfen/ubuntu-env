@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Prerequisites
-sudo apt -y install jq pass git
+sudo apt -y install jq pass git wget tar
 
 # Install a credential store
 # https://docs.docker.com/engine/reference/commandline/login/#credentials-store
