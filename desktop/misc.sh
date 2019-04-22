@@ -13,7 +13,7 @@ dconf read /org/gnome/shell/favorite-apps
 dconf write /org/gnome/shell/favorite-apps "['firefox.desktop', 'org.gnome.Nautilus.desktop', 'org.gnome.Software.desktop', 'yelp.desktop', 'org.gnome.Terminal.desktop', 'spotify_spotify.desktop', 'google-chrome.desktop', 'signal-desktop_signal-desktop.desktop', 'slack_slack.desktop', 'atom_atom.desktop']"
 
 ## install packages
-sudo apt -y install git rsync tree wireshark wget unzip curl libreoffice
+sudo apt -y install git rsync tree wireshark wget unzip curl libreoffice jq
 
 ## upgrade packages
 sudo apt -y dist-upgrade
