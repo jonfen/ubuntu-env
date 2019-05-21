@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Prerequisites
-sudo apt -y install jq pass git wget tar
+sudo apt -y install jq pass git wget tar gnupg2
 
 # Install a credential store
 # https://docs.docker.com/engine/reference/commandline/login/#credentials-store
@@ -13,15 +13,18 @@ wget https://github.com/docker/docker-credential-helpers/releases/download/$late
 tar -xvf docker-credential-pass-$latest_docker_credential_pass_version-amd64.tar.gz
 chmod +x docker-credential-pass
 sudo mv docker-credential-pass /usr/local/bin/
+# Cleanup
+rm docker-credential-pass-$latest_docker_credential_pass_version-amd64.tar.gz
 
 # Initialize
 # https://www.passwordstore.org/
+# rm -rf ~/.password-store/
+echo Enter your full name: 
+read full_name 
+echo Enter your email: 
+read email 
+gpg2 --quick-generate-key "$full_name <$email>"
+pass init $email
+
 # https://git.zx2c4.com/password-store/about/#EXTENDED%20GIT%20EXAMPLE
-echo Enter GPG key ID [ex: ZX2C4 Password Storage Key]: 
-read gpg_key_id 
-
-pass init $gpg_key_id
 pass git init
-
-# Cleanup
-rm docker-credential-pass-$latest_docker_credential_pass_version-amd64.tar.gz

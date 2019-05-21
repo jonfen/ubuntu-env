@@ -159,7 +159,10 @@ $ docker-machine ssh myvm2 "docker swarm leave"
 $ docker-machine env myvm1
 
 # Set docker-machine env variables
+$ docker-machine ls
 $ eval $(docker-machine env myvm1)
+# Now notice the * under ACTIVE, no * means the eval() command didn't work.
+$ docker-machine ls
 
 # Unset docker-machine env variables
 $ eval $(docker-machine env -u)
@@ -179,9 +182,22 @@ $ docker stack rm getstartedlab
 
 ```
 
+### Stacks
+A Stack makes multiple services relate to each other.  AKA it is a group of interrelated services that share dependencies, and can be orchestrated and scaled together.
+
+```
+# Create a 'source of truth' aka a shared folder with the host OS so that data can persist.
+$ docker-machine ssh myvm1 "mkdir ./data"
+```
+
 ## References ##
 
 [Docker Get-Started](https://docs.docker.com/get-started/)
+[Samples](https://docs.docker.com/samples/)
+[User Guide](https://docs.docker.com/engine/userguide/)
+[Admin Guide](https://docs.docker.com/engine/admin/)
+[Training](https://training.docker.com/)
+[Blog](https://blog.docker.com/)
 
 ```
 ## List Docker CLI commands
