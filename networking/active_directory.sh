@@ -18,6 +18,7 @@ read ads_server
 echo Enter Domain Username [ex: first.last]: 
 read username
 
+sudo apt -y install ldap-utils
 sudo apt -y install realmd software-properties-common packagekit samba sssd chrony
 sudo apt -y install krb5-user
 
