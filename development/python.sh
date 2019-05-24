@@ -10,10 +10,6 @@ sudo apt install python3.7 python3.7-dbg python3.7-doc python3.7-minimal python3
 # Install IDLE (Integrated Development and Learning Environment)
 sudo apt install -y idle
 
-# Install snaps
-# sudo snap install pycharm-professional --classic
-sudo snap install pycharm-professional --classic
-
 # Virtual Environments
 sudo apt install -y python3-venv
 mkdir -p ~/dev/environments
