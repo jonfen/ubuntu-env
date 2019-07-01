@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# VK-162 G-Mouse USB GPS Dongle
+sudo apt -y install gpsd gpsd-clients python-gps python-gi-cairo
+stty -F /dev/ttyACM0
+# /etc/default/gpsd needs /dev/ttyACM0 added
+# cgps -s 
+# xgps
+
+# Set System Clock via GPS
+cp ./gpsutcset.py ~
+# sudo gspd /dev/ttyACM0 -F /var/run/gpsd.sock
+sudo python ~/gpsutcset.py
+
 ## install CHIRP
 ## https://chirp.danplanet.com/
 
@@ -14,7 +26,13 @@ sudo dpkg --add-architecture i386
 sudo apt-get install wget libc6:i386 libncurses5:i386 libstdc++6:i386 libgtk2.0-0:i386 
 mkdir -p ~/Downloads/kx3
 cd ~/Downloads/kx3
-wget http://www.elecraft.com/software/KX3/KX3UtilityLINUX_1_16_6_25.tgz
+wget https://ftp.elecraft.com/KX3/Utilities/KX3UtilityLINUX_1_16_6_25.tgz
 tar -zxf KX3UtilityLINUX_1_16_6_25.tgz
 cd kx3util_1_16_6_25 
-./kx3util
+sudo ./kx3util
+
+cd ..
+wget https://ftp.elecraft.com/PX3/Utilities/PX3UtilityLINUX_1_15_9_18.tgz
+tar -zxf PX3UtilityLINUX_1_15_9_18.tgz
+cd px3util_1_15_9_18
+sudo ./px3util
