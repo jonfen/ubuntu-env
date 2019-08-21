@@ -1,12 +1,17 @@
 #!/bin/bash
 
+# kill it all
+sudo apt-get purge -y docker-engine docker docker.io docker-ce docker-ce-cli
+sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce docker-ce-cli 
+sudo rm -rf /var/lib/docker
+sudo rm /etc/apparmor.d/docker
+sudo groupdel docker
+sudo rm -rf /var/run/docker.sock
+
 # Install Docker-CE
-# sudo apt-get purge docker-ce
-# sudo rm -rf /var/lib/docker
-sudo apt update
 echo "Use the Docker repo, not the Ubuntu version"
+sudo apt update
 apt-cache policy docker-ce
-sudo apt -y remove docker docker-engine docker.io
 sudo apt -y install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
