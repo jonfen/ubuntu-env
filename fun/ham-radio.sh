@@ -36,3 +36,10 @@ wget https://ftp.elecraft.com/PX3/Utilities/PX3UtilityLINUX_1_15_9_18.tgz
 tar -zxf PX3UtilityLINUX_1_15_9_18.tgz
 cd px3util_1_15_9_18
 sudo ./px3util
+
+# cqrlog
+# https://www.cqrlog.com
+cd ~/Downloads
+git clone https://github.com/ok2cqr/cqrlog
+cd ./cqrlog/docker-build
+docker build -t this.registry.is.invalid/cqrlog-build .
