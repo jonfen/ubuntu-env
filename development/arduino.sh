@@ -14,7 +14,7 @@ wget https://downloads.arduino.cc/arduino-$latest_arduino_version-linux64.tar.xz
 tar xf arduino-$latest_arduino_version-linux64.tar.xz
 
 cd ~/Downloads/arduino-$latest_arduino_version
-./install.sh
+sudo ./install.sh
 
 #cd ~/Downloads/
 #rm -rf ./arduino-$latest_arduino_version*
