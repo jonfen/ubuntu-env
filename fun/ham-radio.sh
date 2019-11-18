@@ -43,3 +43,8 @@ cd ~/Downloads
 git clone https://github.com/ok2cqr/cqrlog
 cd ./cqrlog/docker-build
 docker build -t this.registry.is.invalid/cqrlog-build .
+
+# fldigi
+# http://www.w1hkj.com/
+
+# WSJTX
