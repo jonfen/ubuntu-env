@@ -12,10 +12,26 @@ sudo apt install -y idle
 
 # Virtual Environments
 sudo apt install -y python3-venv
-mkdir -p ~/dev/environments
+# mkdir -p ~/dev/environments
 # cd ~/dev/environments
 # python3 -m venv my_env
 # source my_env/bin/activate
 
 # deactivate
 
+# PyVmMonitor
+# http://www.pyvmmonitor.com/download.html
+# sudo apt install -y wget mercurial
+# hg clone https://bitbucket.org/sumerc/yappi
+# cd yappi
+# python3.7 setup.py install
+# cd ..
+# wget http://www.mediafire.com/file/qdz3f2vs31a42z6/pyvmmonitor_1.1.2_linux.x86_64.tar.gz
+# tar -zxf pyvmmonitor_1.1.2_linux.x86_64.tar.gz
+# rm pyvmmonitor_1.1.2_linux.x86_64.tar.gz
+# sudo ln -s `pwd`/pyvmmonitor/pyvmmonitor-ui /usr/bin/pyvmmonitor-ui 
+# cd pyvmmonitor
+# ./pyvmmonitor-ui
+
+# PySpy
+# https://pypi.org/project/py-spy/
