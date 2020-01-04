@@ -32,8 +32,10 @@ rm *.tar.gz
 sudo adduser $(whoami) dialout
 cd kx3util_1_16_6_25 
 sudo ./kx3util
-
 cd ..
+
+# Elecraft PX3
+
 wget https://ftp.elecraft.com/PX3/Utilities/PX3UtilityLINUX_1_15_9_18.tgz
 tar -zxf PX3UtilityLINUX_1_15_9_18.tgz
 cd px3util_1_15_9_18
@@ -50,3 +52,12 @@ docker build -t this.registry.is.invalid/cqrlog-build .
 # http://www.w1hkj.com/
 
 # WSJTX
+# https://www.physics.princeton.edu/pulsar/k1jt/wsjtx.html
+# http://www.physics.princeton.edu/pulsar/K1JT/wsjtx-doc/wsjtx-main-2.1.2.html#INSTALL_LINUX
+
+sudo apt -y install libqt5multimedia5-plugins libqt5serialport5 libqt5sql5-sqlite libfftw3-single3 wget
+mkdir -p ~/Downloads/wsjtx
+cd ~/Downloads/wsjtx
+wget https://www.physics.princeton.edu/pulsar/k1jt/wsjtx_2.1.2_amd64.deb
+sudo dpkg -i wsjtx_2.1.2-devel_amd64.deb
+
