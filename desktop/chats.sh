@@ -4,7 +4,7 @@ sudo apt update
 ## Slack
 sudo apt install snapd
 sudo snap install slack --classic
-
+sudo snap install discord
 
 # https://signal.org/download/#linuxModal
 sudo apt -y install curl
