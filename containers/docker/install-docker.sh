@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set +x
+set +o
+
 # https://docs.docker.com/install/linux/docker-ce/ubuntu/
 
 # kill it all
