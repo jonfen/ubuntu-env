@@ -4,4 +4,4 @@
 dpkg -i ./keyring.deb
 echo "deb https://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" >> /etc/apt/sources.list.d/sur5r-i3.list
 sudo apt update
-sudo apt -y install i3 i3lock flameshot
+sudo apt -y install i3 i3lock flameshot caffeine
