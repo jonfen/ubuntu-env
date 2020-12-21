@@ -14,3 +14,6 @@ echo "exec --no-startup-id pasystray" >> ~/.config/i3/config
 
 # Caffeine
 echo "exec --no-startup-id caffeine-indicator" >> ~/.config/i3/config
+
+# Bluetooth 
+echo "exec --no-startup-id blueman-tray" >> ~/.config/i3/config
