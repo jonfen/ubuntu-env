@@ -4,4 +4,13 @@
 dpkg -i ./keyring.deb
 echo "deb https://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" >> /etc/apt/sources.list.d/sur5r-i3.list
 sudo apt update
-sudo apt -y install i3 i3lock flameshot
+sudo apt -y install i3 i3lock flameshot blueman caffeine pasystray
+
+# screen capture
+echo "bindsym Print exec flameshot gui" >> ~/.config/i3/config
+
+# Pulseaudio System Tray (applet)
+echo "exec --no-startup-id pasystray" >> ~/.config/i3/config
+
+# Caffeine
+echo "exec --no-startup-id caffeine-indicator" >> ~/.config/i3/config
