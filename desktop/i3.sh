@@ -36,3 +36,8 @@ EndSection
 
 EOF
 
+## Disable laptop monitor when the lid closes
+# xrandr --listmonitors
+# xrandr --output eDP-1 --off
+# xrandr --auto
+
