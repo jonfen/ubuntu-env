@@ -1,12 +1,9 @@
 #!/bin/bash
 
-sudo apt -y install npm nodejs nodejs-doc
+sudo apt -y install curl
 
-
-# https://gulpjs.com
-
-sudo npm install gulp-cli -g
-npm install gulp -D
-npx -p touch nodetouch gulfile.js
-gulp --help
-
+# https://github.com/nvm-sh/nvm
+cd ~/Downloads
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+source ~/.bashrc
+nvm install node
